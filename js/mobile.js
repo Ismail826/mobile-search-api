@@ -4,8 +4,8 @@ console.log('js connected')
    
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value ;
-    toggleSpinner('block');
-    toggleSearchResults('none');
+    // toggleSpinner('block');
+    // toggleSearchResults('none');
     searchMobileDetails(searchText);
     
    
@@ -74,8 +74,8 @@ const showMobile =(mobile)=>{
    
     
   });
- toggleSpinner('none');
-    toggleSearchResults('block');
+//  toggleSpinner('none');
+//     toggleSearchResults('block');
 }
 
  
