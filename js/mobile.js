@@ -4,8 +4,8 @@ console.log('js connected')
    
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value ;
-    // toggleSpinner('block');
-    // toggleSearchResults('none');
+    toggleSpinner('block');
+    toggleSearchResults('none');
     searchMobileDetails(searchText);
     
    
@@ -31,19 +31,28 @@ const toggleSpinner =(displayStyle)=>{
      fetch(url)
      .then(res =>  res.json())
      .then(data => showMobile(data.data));
-
-    
- 
-  }
+}
 
 searchMobileDetails("Apple");
 
+
+
 const showMobile =(mobile)=>{
   // console.log(mobile);
+
+  // display no phones found
+ const noPhone = document.getElementById('no-found-message');
+ if(mobile.length === 0){
+     noPhone.classList.remove('d-none');
+ }
+ else{
+     noPhone.classList.add('d-none');
+ }
+
   const mobileResult = document.getElementById('mobile-result');
 
   mobileResult.innerHTML='';
-  mobile.forEach(mobiles =>{
+  mobile?.forEach(mobiles =>{
     console.log(mobiles);
 
     const div = document.createElement('div');
@@ -62,13 +71,14 @@ const showMobile =(mobile)=>{
     `;
     mobileResult.appendChild(div);
 
-    // toggleSpinner('none');
-    // toggleSearchResults('block');
+   
     
   });
-
+ toggleSpinner('none');
+    toggleSearchResults('block');
 }
 
+ 
 
 
 const loadMobileDetail = id =>{
