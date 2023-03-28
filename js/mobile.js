@@ -1,7 +1,6 @@
 console.log('js connected')
 
-  const searchMobile = async()=>{
-   
+  const searchMobile =()=>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value ;
     // toggleSpinner('block');
