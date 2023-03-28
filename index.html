@@ -11,20 +11,18 @@
  <body class="bg-gray">
 
             <h2 class="text-center text-bg-primary"><span class="bs-warning">Welcome To</span> Mobile-Shop</h2>
-            <!-- Meal search Area
+            <!-- Mobile search Area
              -->
              <div class="input-group mb-3 w-50 mx-auto">
                 <input id="search-field" type="text" class="form-control" placeholder="Search the mobile you want" aria-label="Search the food you want" aria-describedby="button-addon2">
                 
                 <button onclick="searchMobile()" class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
-                
-                
-              </div>
+                </div>
               <!-- spineer -->
               <div id="spineer" class="text-center">
                 Lodding...
             </div>
-            
+            <!-- noMobile Error message -->
             <div id="no-found-message" class="mt-4 d-none">
                 <h3 class="text-danger text-center text-capitalize align-items-center">No Phone Found. Please try a new search</h3>
             </div>
@@ -33,7 +31,6 @@
 <!--   single mobile details-->
 <!-- modal contents -->
 <section>
-            
   <!-- Modal -->
   <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
       aria-hidden="true">
@@ -53,17 +50,12 @@
       </div>
   </div>
             
-            <!--  <div id="mobile-details" class="w-50 card-img-top mx-auto">
-              
-             </div> -->
-<!-- mobile search result -->
-<br> <br>
+<!-- mobile search details result -->
+<br>
              <div id="mobile-result" class="row row-cols-1 row-cols-md-4 g-4">
 
              </div>
-           
-        
-    
+
 <script src="js/mobile.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

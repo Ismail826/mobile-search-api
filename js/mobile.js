@@ -1,12 +1,11 @@
-console.log('js connected')
-  const searchMobile =()=>{
+const searchMobile =()=>{
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value ;
     // toggleSpinner('block');
     // toggleSearchResults('none');
     searchMobileDetails(searchText);
     document.getElementById('search-field').value='';
-    // console.log(searchField);
+ 
 }
 // spineer
 const toggleSpinner =(displayStyle)=>{
@@ -15,7 +14,7 @@ const toggleSpinner =(displayStyle)=>{
   const toggleSearchResults =(displayStyle)=>{
   document.getElementById('mobile-result').style.display = displayStyle;
   }
-  // data fetch
+  // data fetch for mobile search
 const searchMobileDetails =(searchText)=>{
     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}
     `;
@@ -57,6 +56,8 @@ const mobileResult = document.getElementById('mobile-result');
 //  toggleSpinner('none');
 //     toggleSearchResults('block');
 }
+
+// data fatch for mobile details
 const loadMobileDetail = id =>{
   console.log('button is ok!')
   console.log(id);
