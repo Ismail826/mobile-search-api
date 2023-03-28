@@ -66,7 +66,9 @@ const showMobile =(mobile)=>{
      
     </div>
     <div class="text-center text-success">
+   
     <button onclick="loadMobileDetail('${mobiles.slug}')" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#phoneDetailModal">Show Details</button>
+    <br>
     </div>
     `;
     mobileResult.appendChild(div);
